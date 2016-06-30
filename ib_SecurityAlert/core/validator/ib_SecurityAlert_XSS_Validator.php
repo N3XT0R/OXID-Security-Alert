@@ -8,5 +8,9 @@
  */
 class ib_SecurityAlert_XSS_Validator extends ib_SecurityAlert_AbstractValidator{
 
-    
+    protected $_aMatchRules = [
+        'javascript:alert\((.*)\)',
+        '<script>alert\((.*)\)',
+        '<script src=(.*)',
+    ];
 }
