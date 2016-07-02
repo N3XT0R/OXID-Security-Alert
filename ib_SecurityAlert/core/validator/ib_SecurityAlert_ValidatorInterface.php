@@ -9,6 +9,10 @@
 interface ib_SecurityAlert_ValidatorInterface {
 
 
+    public function getType();
+    public function setType($sType);
+
+
     public function validateArray(array $aInput);
 
     public function validateString($sInput);

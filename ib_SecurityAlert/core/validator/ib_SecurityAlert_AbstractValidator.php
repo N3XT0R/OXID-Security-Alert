@@ -9,6 +9,7 @@
 abstract class ib_SecurityAlert_AbstractValidator implements ib_SecurityAlert_ValidatorInterface{
 
     protected $_aMatchRules = [];
+    protected $_sType;
 
     /**
      * Get Match-Rules
@@ -25,6 +26,24 @@ abstract class ib_SecurityAlert_AbstractValidator implements ib_SecurityAlert_Va
      */
     public function setMatchRules(array $aMatchRules){
         $this->_aMatchRules = $aMatchRules;
+        return $this;
+    }
+
+    /**
+     * Get Attack-Type
+     * @return mixed
+     */
+    public function getType(){
+        return $this->_sType;
+    }
+
+    /**
+     * Set Attack-Type
+     * @param $sType Type of Attack
+     * @return $this
+     */
+    public function setType($sType){
+        $this->_sType   = $sType;
         return $this;
     }
 

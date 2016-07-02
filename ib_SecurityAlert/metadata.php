@@ -43,7 +43,8 @@ $aModule = [
         ],
     ],
     "templates"   => [
-
+        'ib_SecurityAlert_NotifyMail.tpl'           => 'ib_SecurityAlert/application/views/tpl/ib_SecurityAlert_NotifyMail.tpl',
+        'ib_SecurityAlert_NotifyMail_plain.tpl'     => 'ib_SecurityAlert/application/views/tpl/ib_SecurityAlert_NotifyMail_plain.tpl',
     ],
     "blocks"      => [
 

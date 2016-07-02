@@ -8,7 +8,9 @@
  */
 class ib_SecurityAlert_RFI_Validator extends ib_SecurityAlert_AbstractValidator{
 
+    protected $_aMatchRules = [
+        '(http|https):\/\/(.*)\/(.*)',
+    ];
     
-
-
+    protected $_sType = "Remote File Inclusion";
 }

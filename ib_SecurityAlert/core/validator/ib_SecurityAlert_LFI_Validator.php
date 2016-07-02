@@ -17,4 +17,6 @@ class ib_SecurityAlert_LFI_Validator extends ib_SecurityAlert_AbstractValidator{
         'etc\/shadow',
     ];
     
+    protected $_sType = "Local File Inclusion";
+    
 }

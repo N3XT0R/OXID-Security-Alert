@@ -13,4 +13,6 @@ class ib_SecurityAlert_XSS_Validator extends ib_SecurityAlert_AbstractValidator{
         '<script>alert\((.*)\)',
         '<script src=(.*)',
     ];
+
+    protected $_sType = "Cross Site Scripting";
 }

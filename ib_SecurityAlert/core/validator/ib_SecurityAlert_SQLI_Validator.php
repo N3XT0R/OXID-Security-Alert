@@ -20,5 +20,7 @@ class ib_SecurityAlert_SQLI_Validator extends ib_SecurityAlert_AbstractValidator
         //time-based:
         'BENCHMARK\(\d+,ENCODE\((.*)\)\)',
     ];
+
+    protected $_sType = "SQL-Injection";
     
 }
