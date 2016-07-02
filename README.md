@@ -1,2 +1,9 @@
 # OXID-Security-Alert
-Benachrichtigungsmodul für OXID, welches XSS,LFI,RFI und SQL-Injection Angriffe per Email meldet.
+Dieses Modul dient zur proaktiven Benachrichtigungen, sobald ein Penetrationstest auf einen Webshop stattfindet.
+Das Modul benachrichtigt einen ausgewählten Empfänger über folgende Angriffsversuche:
+
+- LFI (Local File Inclusion)
+- RFI (Remote File Inclusion)
+- SQLI (SQL-Injection)
+- XSS (Cross Site Scripting)
+
