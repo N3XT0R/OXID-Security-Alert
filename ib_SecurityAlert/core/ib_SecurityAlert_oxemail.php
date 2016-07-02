@@ -13,7 +13,8 @@ class ib_SecurityAlert_oxemail extends ib_SecurityAlert_oxemail_parent{
 
 
     public function sendSecurityAlertMail($sEmail, ib_SecurityAlert_ValidatorInterface $oValidator, array $aHeaders){
-
+        $oUtils     = oxRegistry::get("oxUtilsServer");
+        $sUrl       = htmlspecialchars($oUtils->getServerVar("REQUEST_URI"));
         $oShop = $this->_getShop();
         $this->_setMailParams($oShop);
 
@@ -21,10 +22,13 @@ class ib_SecurityAlert_oxemail extends ib_SecurityAlert_oxemail_parent{
         $oSmarty = $this->_getSmarty();
         $this->setViewData("oValidator", $oValidator);
         $this->setViewData("aHeaders", $aHeaders);
+        $this->setViewData("sUrl", $sUrl);
+
+        $this->_processViewArray();
 
         $this->setBody($oSmarty->fetch($this->_sSecurityAlertEmail));
         $this->setAltBody($oSmarty->fetch($this->_sSecurityAlertEmailPlain));
-        $this->setSubject();
+        $this->setSubject($oValidator->getType());
         $this->setRecipient($sEmail);
         return $this->send();
     }
